@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickPulse | Online Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">Q</span> QuickPulse</a>
+    <span class="top-note">Your opinion matters</span>
+  </header>
+
+  <main class="container">
+    <section id="welcome" class="panel welcome">
+      <div class="eyebrow">ONLINE SURVEY</div>
+      <h1>We'd love to hear<br><span>your thoughts.</span></h1>
+      <p>Answer 5 randomly selected questions from our question collection. It only takes a few minutes.</p>
+      <div class="info-row">
+        <div><strong>5</strong><small>Questions</small></div>
+        <div><strong>2–3</strong><small>Minutes</small></div>
+        <div><strong>MongoDB</strong><small>Response storage</small></div>
+      </div>
+      <button id="startBtn" class="primary-btn">Start survey <span>→</span></button>
+    </section>
+
+    <section id="survey" class="panel hidden">
+      <div class="survey-head">
+        <div><div class="eyebrow">QUICKPULSE SURVEY</div><h2>Share your feedback</h2></div>
+        <span class="counter">5 questions</span>
+      </div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <form id="surveyForm">
+        <div id="questions"></div>
+        <div class="form-footer">
+          <span>All questions are required</span>
+          <button id="submitBtn" type="submit" class="primary-btn">Submit answers <span>→</span></button>
+        </div>
+      </form>
+      <p id="errorMessage" class="message error hidden"></p>
+    </section>
+
+    <section id="result" class="panel result hidden">
+      <div class="success-icon">✓</div>
+      <div class="eyebrow">RESPONSE RECORDED</div>
+      <h2>Thank you for<br><span>your feedback!</span></h2>
+      <p>Your answers have been saved successfully to MongoDB.</p>
+      <div id="summary" class="summary"></div>
+      <button id="againBtn" class="primary-btn">Take another survey <span>↻</span></button>
+    </section>
+  </main>
+  <footer>QuickPulse Survey · Powered by MongoDB</footer>
+  <script src="script.js"></script>
+</body>
+</html>
